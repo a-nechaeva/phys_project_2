@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # ---- начальные условия ---- #
 v_0 = 0.1  # м/с
 alpha = pi / 6  # угол между вектором скорости и x
-x_0 = 3  # м
+x_0 = 0  # м
 y_0 = 5  # м
 m = 0.000001  # кг
 q = 0.001  # Кл
@@ -59,7 +59,7 @@ def y_scnd(x, y):
 
 # ---- основная функция подсчета ---- #
 def constructor():
-    for i in range(10000):
+    for i in range(100):
         T_array.append(t_counter(T_array[-1]))
         X_array.append(x_counter(X_array[-1], Vx_array[-1]))
         Y_array.append(y_counter(Y_array[-1], Vy_array[-1]))
