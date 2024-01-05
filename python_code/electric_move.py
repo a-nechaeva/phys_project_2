@@ -84,4 +84,7 @@ plt.grid(which='major')
 # ---- включаем дополнительную сетку ---- #
 plt.grid(which='minor', linestyle=':')
 plt.tight_layout()
+center_Q = 0.0, 0.0
+c_Q = plt.Circle(center_Q, radius=1.5)
+plt.gca().add_artist(c_Q)
 plt.show()
