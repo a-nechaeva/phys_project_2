@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 # ---- начальные условия ---- #
-v_0 = 0.1  # м/с
+v_0 = 10000  # м/с
 alpha = -pi / 6  # угол между вектором скорости и x
 x_0 = 0  # м
 y_0 = 5  # м
@@ -15,7 +15,7 @@ k = 1 / (4 * pi * eps_0)  # коэффициент
 
 
 # ---- параметры для моделирования ---- #
-dt = 0.00001  # с
+dt = 0.000001  # с
 T_array = [0]  # список, хранящий время
 X_array = [x_0]  # список, хранящий итерации по x
 Y_array = [y_0]  # список, хранящий итерации по y
@@ -58,21 +58,21 @@ def y_frst(y_first, y_second):
 
 # ---- функция, отсчитывающая x'' ---- #
 def x_scnd(x, y):
-    a = -(k * q * Q / m) * x * ((x ** 2 + y ** 2) ** (-3 / 2))
+    a = (k * q * Q / m) * x * ((x ** 2 + y ** 2) ** (-3 / 2))
     print("Ax: ", a, "\n")
     return a
 
 
 # ---- функция, отсчитывающая y'' ---- #
 def y_scnd(x, y):
-    a = -(k * q * Q / m) * y * ((x ** 2 + y ** 2) ** (-3 / 2))
+    a = (k * q * Q / m) * y * ((x ** 2 + y ** 2) ** (-3 / 2))
     print("Ay: ", a, "\n")
     return a
 
 
 # ---- основная функция подсчета ---- #
 def constructor():
-    for i in range(10):
+    for i in range(250):
         T_array.append(t_counter(T_array[-1]))
         Vx_array.append(x_frst(Vx_array[-1], x_scnd(X_array[-1], Y_array[-1])))
         Vy_array.append(y_frst(Vy_array[-1], y_scnd(X_array[-1], Y_array[-1])))
@@ -102,8 +102,8 @@ plt.gca().add_artist(c_Q)
 center_q_st = x_0, y_0
 c_q_start = plt.Circle(center_q_st, radius=0.5, color="k")
 plt.gca().add_artist(c_q_start)
-plt.xlim(-5, 5)  
-plt.ylim(-5, 6)
+plt.xlim(-5, 5)
+plt.ylim(-5, 20)
 plt.show()
 
 print("Vx: ", Vx_array, "\n")
