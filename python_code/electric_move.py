@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 # ---- начальные условия ---- #
 v_0 = 0.1  # м/с
 alpha = -pi / 6  # угол между вектором скорости и x
-x_0 = 5  # м
-y_0 = 0  # м
-m = 0.000001  # кг
+x_0 = 0  # м
+y_0 = 5  # м
+m = 0.0001  # кг
 q = 0.001  # Кл
 Q = 0.07  # Кл
 eps_0 = 8.85 * 10 ** (-12)
@@ -88,3 +88,5 @@ center_Q = 0.0, 0.0
 c_Q = plt.Circle(center_Q, radius=1.5)
 plt.gca().add_artist(c_Q)
 plt.show()
+
+print(Vy_array)
