@@ -15,7 +15,7 @@ k = 1 / (4 * pi * eps_0)  # коэффициент
 
 
 # ---- параметры для моделирования ---- #
-dt = 0.0001  # с
+dt = 0.00001  # с
 T_array = [0]  # список, хранящий время
 X_array = [x_0]  # список, хранящий итерации по x
 Y_array = [y_0]  # список, хранящий итерации по y
@@ -86,8 +86,7 @@ Tuple = constructor()
 
 
 # ---- строим график ----#
-#plt.axis([-6.0, 6.0, -6.0, 6.0])
-# ---- добавляем подписи к осям и заголовок диаграммы ----#
+
 plt.xlabel('x, м', fontsize=16)
 plt.ylabel('y, м', fontsize=16)
 plt.title('Траектория движения частицы q')
@@ -98,10 +97,13 @@ plt.grid(which='major')
 plt.grid(which='minor', linestyle=':')
 plt.tight_layout()
 center_Q = 0.0, 0.0
-c_Q = plt.Circle(center_Q, radius=1.5)
+c_Q = plt.Circle(center_Q, radius=1.5, color="m")
 plt.gca().add_artist(c_Q)
-plt.xlim(-5, 5)  # Новый масштаб оси X от 0 до 6
-plt.ylim(-5, 5)
+center_q_st = x_0, y_0
+c_q_start = plt.Circle(center_q_st, radius=0.5, color="k")
+plt.gca().add_artist(c_q_start)
+plt.xlim(-5, 5)  
+plt.ylim(-5, 6)
 plt.show()
 
 print("Vx: ", Vx_array, "\n")
