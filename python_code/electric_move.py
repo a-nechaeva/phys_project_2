@@ -73,15 +73,15 @@ Tuple = constructor()
 
 
 # ---- строим график ----#
-plt.axis([-5, 5, -5, 5])
+plt.axis([-6.0, 6.0, -6.0, 6.0])
 # ---- добавляем подписи к осям и заголовок диаграммы ----#
 plt.xlabel('x, м', fontsize=16)
 plt.ylabel('y, м', fontsize=16)
 plt.title('Траектория движения частицы q')
 plt.plot(Tuple[0], Tuple[1])
 
-#plt.grid(which='major')
+plt.grid(which='major')
 # ---- включаем дополнительную сетку ---- #
-#plt.grid(which='minor', linestyle=':')
-#plt.tight_layout()
+plt.grid(which='minor', linestyle=':')
+plt.tight_layout()
 plt.show()
