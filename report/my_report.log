@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  15 JAN 2024 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.6.14)  15 JAN 2024 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1377,17 +1377,17 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 (fancyhdr)                \setlength{\footskip}{12.0pt}.
 
 [2]
-<gr/1.png, id=54, 1019.30812pt x 513.41812pt>
+<gr/1.png, id=58, 1019.30812pt x 513.41812pt>
 File: gr/1.png Graphic file (type png)
 <use gr/1.png>
 Package pdftex.def Info: gr/1.png  used on input line 195.
 (pdftex.def)             Requested size: 316.73546pt x 159.534pt.
-<gr/2.png, id=56, 993.7125pt x 518.6878pt>
+<gr/2.png, id=60, 993.7125pt x 518.6878pt>
 File: gr/2.png Graphic file (type png)
 <use gr/2.png>
 Package pdftex.def Info: gr/2.png  used on input line 200.
 (pdftex.def)             Requested size: 316.73546pt x 165.32658pt.
-<gr/3.png, id=57, 1025.33063pt x 524.71031pt>
+<gr/3.png, id=61, 1025.33063pt x 524.71031pt>
 File: gr/3.png Graphic file (type png)
 <use gr/3.png>
 Package pdftex.def Info: gr/3.png  used on input line 205.
@@ -1396,7 +1396,7 @@ Package pdftex.def Info: gr/3.png  used on input line 205.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gr/4.png, id=58, 986.9372pt x 514.92375pt>
+<gr/4.png, id=62, 986.9372pt x 514.92375pt>
 File: gr/4.png Graphic file (type png)
 <use gr/4.png>
 Package pdftex.def Info: gr/4.png  used on input line 210.
@@ -1404,7 +1404,7 @@ Package pdftex.def Info: gr/4.png  used on input line 210.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<gr/5.png, id=59, 975.645pt x 516.42938pt>
+<gr/5.png, id=63, 975.645pt x 516.42938pt>
 File: gr/5.png Graphic file (type png)
 <use gr/5.png>
 Package pdftex.def Info: gr/5.png  used on input line 215.
@@ -1434,21 +1434,14 @@ Package fancyhdr Warning: \footskip is too small (0.0pt):
 LaTeX2e <2023-06-01>
 L3 programming layer <2023-06-05>
  ***********
-
-
-Package rerunfilecheck Warning: File `my_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `my_report.out':
-(rerunfilecheck)             Before: C660D8DEB591C2AFC109CE728F4A1F45;747
-(rerunfilecheck)             After:  ABF9F9A7F8725072DA272C09C724860F;1059.
+Package rerunfilecheck Info: File `my_report.out' has not changed.
+(rerunfilecheck)             Checksum: ABF9F9A7F8725072DA272C09C724860F;1059.
  ) 
 Here is how much of TeX's memory you used:
- 53047 strings out of 475734
- 1311853 string characters out of 5786229
+ 53048 strings out of 475734
+ 1311864 string characters out of 5786229
  2005043 words of memory out of 5000000
- 73141 multiletter control sequences out of 15000+600000
+ 73142 multiletter control sequences out of 15000+600000
  531903 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,89p,762b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1471,10 +1464,10 @@ ive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><c:/texlive/2023/t
 exmf-dist/fonts/type1/public/cm-super/sfti0900.pfb><c:/texlive/2023/texmf-dist/
 fonts/type1/public/cm-super/sfti1000.pfb><c:/texlive/2023/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb>
-Output written on my_report.pdf (6 pages, 591454 bytes).
+Output written on my_report.pdf (6 pages, 592717 bytes).
 PDF statistics:
- 182 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 185 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  20 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
