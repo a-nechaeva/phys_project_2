@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 start_params = []
 # ---- начальные условия ---- #
 with open("data.txt", "r") as f:
+    print("-----Start parameters-----\n")
     for line in f.readlines():
+        print(line)
         start_params.append(float(line.split()[0]))
+    print("----------------------------")
 
 v_0 = start_params[0]  # м/с
 alpha = start_params[1] * pi / 180  # угол между вектором скорости и x
@@ -108,5 +111,5 @@ else:
     plt.xlim(-8, 8)
     plt.ylim(-6, 6)
     plt.show()
-    print("Work program time: ", T_array[-1], "s")
+    print("\nWork program time: ", T_array[-1], "s \n")
 
