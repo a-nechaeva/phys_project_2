@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 
 
 # ---- начальные условия ---- #
-v_0 = 10000  # м/с
+v_0 = 23000  # м/с
 alpha = -pi / 3  # угол между вектором скорости и x
 x_0 = 0  # м
 y_0 = 5  # м
-m = 0.0001  # кг
+m = 0.001  # кг
 q = 0.001  # Кл
 Q = 0.07  # Кл
 eps_0 = 8.85 * 10 ** (-12)
@@ -31,48 +31,42 @@ def t_counter(t):
 # ---- функция, отсчитывающая x ---- #
 def x_counter(x, x_first):
     a = x + dt * x_first
-    print("X: ", a, "\n")
     return a
 
 
 # ---- функция, отсчитывающая y ---- #
 def y_counter(y, y_first):
     a = y + dt * y_first
-    print("Y: ", a, "\n")
     return a
 
 
 # ---- функция, отсчитывающая x' ---- #
 def x_frst(x_first, x_second):
     a = x_first + dt * x_second
-    print("Vx: ", a, "\n")
     return a
 
 
 # ---- функция, отсчитывающая y' ---- #
 def y_frst(y_first, y_second):
     a = y_first + dt * y_second
-    print("Vy: ", a, "\n")
     return a
 
 
 # ---- функция, отсчитывающая x'' ---- #
 def x_scnd(x, y):
-    a = -(k * q * Q / m) * x * ((x ** 2 + y ** 2) ** (-3 / 2))
-    print("Ax: ", a, "\n")
+    a = (k * q * Q / m) * x * ((x ** 2 + y ** 2) ** (-3 / 2))
     return a
 
 
 # ---- функция, отсчитывающая y'' ---- #
 def y_scnd(x, y):
-    a = -(k * q * Q / m) * y * ((x ** 2 + y ** 2) ** (-3 / 2))
-    print("Ay: ", a, "\n")
+    a = (k * q * Q / m) * y * ((x ** 2 + y ** 2) ** (-3 / 2))
     return a
 
 
 # ---- основная функция подсчета ---- #
 def constructor():
-    for i in range(250):
+    for i in range(30000):
         T_array.append(t_counter(T_array[-1]))
         Vx_array.append(x_frst(Vx_array[-1], x_scnd(X_array[-1], Y_array[-1])))
         Vy_array.append(y_frst(Vy_array[-1], y_scnd(X_array[-1], Y_array[-1])))
@@ -97,16 +91,12 @@ plt.grid(which='major')
 plt.grid(which='minor', linestyle=':')
 plt.tight_layout()
 center_Q = 0.0, 0.0
-c_Q = plt.Circle(center_Q, radius=1.5, color="m")
+c_Q = plt.Circle(center_Q, radius=0.3, color="m")
 plt.gca().add_artist(c_Q)
 center_q_st = x_0, y_0
-c_q_start = plt.Circle(center_q_st, radius=0.5, color="k")
+c_q_start = plt.Circle(center_q_st, radius=0.1, color="k")
 plt.gca().add_artist(c_q_start)
-plt.xlim(-5, 5)
-plt.ylim(-5, 20)
+plt.xlim(-8, 8)
+plt.ylim(-6, 6)
 plt.show()
 
-print("Vx: ", Vx_array, "\n")
-print("Vy: ", Vy_array, "\n")
-print("X: ", X_array, "\n")
-print("Y: ", Y_array, "\n")
